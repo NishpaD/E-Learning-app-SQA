@@ -16,3 +16,17 @@ elif choice == 3:
     print("Thank you for using the E-Learning Application!")
 else:
     print("Invalid choice. Please try again.")
+
+# User Authentication Feature
+print("Welcome to the E-Learning Application!")
+
+# User Authentication
+users = {"admin": "password123"}  # Predefined users
+
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+if username in users and users[username] == password:
+    print("Login successful!")
+else:
+    print("Invalid username or password.")
