@@ -26,6 +26,35 @@ users = {"admin": "password123"}  # Predefined users
 username = input("Enter your username: ")
 password = input("Enter your password: ")
 
+# Course Management Feature
+print("Welcome to the E-Learning Application!")
+
+# Manage Courses
+courses = []
+
+while True:
+    print("\nCourse Management")
+    print("1. Add a Course")
+    print("2. View Courses")
+    print("3. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        course_name = input("Enter the course name: ")
+        courses.append(course_name)
+        print(f"Course '{course_name}' added successfully!")
+    elif choice == 2:
+        print("\nAvailable Courses:")
+        for course in courses:
+            print(f"- {course}")
+    elif choice == 3:
+        print("Exiting Course Management...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+
 if username in users and users[username] == password:
     print("Login successful!")
 else:
