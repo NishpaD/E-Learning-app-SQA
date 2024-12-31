@@ -1,0 +1,18 @@
+# Main E-Learning Application File
+print("Welcome to the E-Learning Application!")
+
+# Basic Menu
+print("1. Login")
+print("2. Register")
+print("3. Exit")
+
+choice = int(input("Enter your choice: "))
+
+if choice == 1:
+    print("Login functionality coming soon!")
+elif choice == 2:
+    print("Registration functionality coming soon!")
+elif choice == 3:
+    print("Thank you for using the E-Learning Application!")
+else:
+    print("Invalid choice. Please try again.")
