@@ -83,3 +83,30 @@ for question, answer in questions.items():
 
 print(f"\nYour total score is {score}/{len(questions)}.")
 
+# Fix for Quiz Scoring Bug
+
+print("Welcome to the E-Learning Application!")
+
+# Simple Quiz with Correct Scoring
+questions = {
+    "What is 2 + 2?": "4",
+    "What is the capital of France?": "Paris",
+    "Who wrote 'To Kill a Mockingbird'?": "Harper Lee"
+}
+
+score = 0
+
+print("\nQuiz Time!")
+for question, answer in questions.items():
+    user_answer = input(f"{question} ")
+    # Fix: Ensuring correct comparison (case insensitive and trimming extra spaces)
+    if user_answer.strip().lower() == answer.lower():
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Wrong! The correct answer is {answer}.")
+
+# Fix: Displaying the score correctly
+print(f"\nYour total score is {score}/{len(questions)}.")
+
+
