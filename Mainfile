@@ -59,3 +59,27 @@ if username in users and users[username] == password:
     print("Login successful!")
 else:
     print("Invalid username or password.")
+
+# Quiz Feature
+print("Welcome to the E-Learning Application!")
+
+# Simple Quiz
+questions = {
+    "What is 2 + 2?": "4",
+    "What is the capital of France?": "Paris",
+    "Who wrote 'To Kill a Mockingbird'?": "Harper Lee"
+}
+
+score = 0
+
+print("\nQuiz Time!")
+for question, answer in questions.items():
+    user_answer = input(f"{question} ")
+    if user_answer.strip().lower() == answer.lower():
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Wrong! The correct answer is {answer}.")
+
+print(f"\nYour total score is {score}/{len(questions)}.")
+
